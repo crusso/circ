@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "circ_backend": {
+      "main": "src/circ_backend/main.mo",
+      "type": "motoko"
+    },
+    "circ_frontend": {
+      "dependencies": [
+        "circ_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/circ_frontend/src/index.html"
+      },
+      "source": [
+        "src/circ_frontend/assets",
+        "dist/circ_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
