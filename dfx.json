@@ -1,21 +1,16 @@
 {
   "canisters": {
-    "circ_backend": {
-      "main": "src/circ_backend/main.mo",
-      "type": "motoko"
+    "A": {
+      "type": "custom",
+       "build": "sh builda.sh",
+      "wasm" : "A.wasm",
+      "candid" : "src/A/A.did"
     },
-    "circ_frontend": {
-      "dependencies": [
-        "circ_backend"
-      ],
-      "frontend": {
-        "entrypoint": "src/circ_frontend/src/index.html"
-      },
-      "source": [
-        "src/circ_frontend/assets",
-        "dist/circ_frontend/"
-      ],
-      "type": "assets"
+    "B": {
+      "type": "custom",
+       "build": "sh buildb.sh",
+      "wasm" : "B.wasm",
+      "candid" : "src/B/B.did"
     }
   },
   "defaults": {
